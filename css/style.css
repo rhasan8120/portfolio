@@ -1,0 +1,695 @@
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+ol,ul{
+  list-style: none;
+}
+
+a,a:focus,a:hover{
+  text-decoration: none;
+  color: #149ddd;
+}
+
+body{
+  font-family: "Open Sans", sans-serif;
+  color: #272829;
+}
+
+h1, h2, h3, h4, h5, h6,p{
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.title h2{
+  font-size: 32px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  position: relative;
+  color: #173b6c;
+}
+
+.title h2::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background: #149ddd;
+  bottom: 0;
+  left: 0;
+}
+
+/* =========================
+    preloader css start
+============================ */
+.preloader{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  height: 100vh;
+  z-index: 99999;
+}
+
+.preloader img{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* ========================
+      preloader css end
+============================ */
+/* =========================
+    back-to-top css start
+============================ */
+.back-to-top{
+  position: fixed;
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  right: 20px;
+  bottom: 30px;
+  border: 3px solid #149ddd;
+  color: #149ddd;
+  animation: anim 1s;
+  transition: .4s;
+}
+
+.back-to-top i{
+  font-size: 24px;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+
+.back-to-top:hover {
+  color: #fff;
+  background: #2eafec;
+}
+
+@keyframes anim{
+  from{
+    transform: scale(0)
+  }
+  to{
+    transform: scale(1);
+  }
+}
+
+/* ========================
+      back-to-top css end
+============================ */
+/* =========================
+      header css start
+============================ */
+#header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 9999;
+  padding: 0 15px;
+  background: #040b14;
+  transition: .4s ease-in-out;
+}
+
+#header .profile img{
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+  border: 8px solid #2c2f3f;
+}
+
+#header .profile h1{
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+#header .profile h1 a{
+  color: #fff;
+} 
+
+#header .profile .social-links a{
+  font-size: 18px;
+  display: inline-block;
+  background: #212431;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#header .profile .social-links a:hover{
+  color: #fff;
+  background: #149ddd;
+}
+
+
+.nav-menu{
+  padding-top: 30px;
+}
+
+.nav-menu *{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu > ul > li{
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu a{
+  display: flex;
+  align-items: center;
+  color: #a8a9b4;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+.nav-menu a i{
+  font-size: 24px;
+  padding-right: 8px;
+  color: #6f7180;
+}
+
+.nav-menu a:hover, .nav-menu .active > a, 
+.nav-menu li:hover > a{
+  color: #fff;
+}
+
+.nav-menu a:hover i, .nav-menu .active > a i, 
+.nav-menu li:hover > a i{
+  color: #149ddd;
+}
+
+.mobile-nav-toggle{
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9999;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  line-height: 1;
+  cursor: pointer;
+  text-align: right;
+}
+
+.mobile-nav-toggle i{
+  color: #149ddd;
+}
+
+.mobile-nav-active{
+  overflow: hidden;
+}
+
+.mobile-nav-active #header{
+  left: 0;
+}
+
+.mobile-nav-active .mobile-nav-toggle i{
+  color: #149ddd;
+}
+
+/* ============================
+        header css end
+=============================== */
+
+/* ==========================
+        hero css start
+============================= */
+#hero-part{
+  background: url("../images/herobg.png") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+ #hero-part::after{
+  content: "";
+  background: rgba(5, 13, 24, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+} 
+
+#hero-part .hero-container{
+  position: absolute;
+  z-index: 2;
+  min-width: 300px;
+}
+
+#hero-part h1{
+  margin: 0 0 10px 0;
+  font-size: 64px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#hero-part p{
+  color: #fff;
+  margin-bottom: 50px;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+}
+
+#hero-part p span{
+  color: #fff;
+  padding-bottom: 4px;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #149ddd;
+}
+
+/* ============================
+          hero css end
+=============================== */
+
+#main{
+  margin-left: 300px;
+}
+
+/* ==========================
+        about css start
+============================== */
+#about-part{
+  padding: 60px 0;
+  background: #f5f5f5;
+}
+
+#about-part .text p{
+  margin: 30px 0;
+}
+
+#about-part h3{
+  margin-bottom: 20px;
+}
+
+#about-part ul{
+  margin-top: 20px;
+}
+
+#about-part ul li{
+  margin: 15px 0;
+}
+
+#about-part ul i {
+  font-size: 20px;
+  padding-right: 2px;
+  color: #149ddd;
+}
+
+#about-part .img{
+  position: relative;
+}
+
+#about-part .overlay{
+  position: absolute;
+  background: rgba(5, 13, 24, 0.3);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .4s;
+}
+
+#about-part .overlay:hover{
+  background: none;
+}
+
+/* ========================================
+              about css start
+=========================================== */
+
+/* ========================================
+              skills css start
+=========================================== */
+#skills-part{
+  padding: 60px 0;
+  background: #ebf7eb;
+}
+
+#skills-part p{
+  margin: 30px 0;
+}
+
+#skills-part .progress{
+  height: 60px;
+  display: block;
+  background: none;
+}
+
+#skills-part .progress .skill{
+  margin: 6px 0 15px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #050d18;
+}
+
+#skills-part .progress-bar-wrap{
+  background: #dce8f8;
+}
+
+#skills-part .progress-bar{
+  width: 1px;
+  height: 10px;
+  transition: .9s;
+  background-color: #149ddd;
+}
+
+/* ========================================
+              skills css start
+=========================================== */
+/* ========================================
+              portfolio css start
+=========================================== */
+#portfolio-part{
+  padding: 60px 0;
+  background: #f3f3f3;
+}
+
+#portfolio-part h4{
+  margin: 20px 0;
+}
+
+#portfolio-part p{
+  margin-bottom: 25px;
+}
+
+#portfolio-part .portfolio-item{
+  margin-bottom: 30px;
+}
+ 
+#portfolio-part .portfolio-wrap{
+  position: relative;
+}
+
+#portfolio-part .portfolio-wrap img{
+  transition: .4s;
+}
+
+#portfolio-part .overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(236, 194, 172, 0.8);
+  transform: scale(.9);
+  border: 4px solid #444;
+  border-radius: 3px;
+  color: #fff;
+  text-align: center;
+  transition: .4s;
+}
+
+#portfolio-part .overlay i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: #040b14;
+  border-radius: 50%;
+}
+
+#portfolio-part .portfolio-wrap:hover img{
+  -webkit-box-shadow: 0 10px 10px #777;
+  -moz-box-shadow: 0 10px 10px #777;
+  box-shadow: 0 10px 10px #777;
+  transform: scale(.90);
+}
+
+#portfolio-part .portfolio-wrap:hover .overlay{
+  transform: scale(0);
+}
+
+#portfolio-part .portfolio-wrap:hover .overlay i{
+  background: #149ddd;
+}
+
+
+/* ========================================
+              portfolio css end
+=========================================== */
+/* ========================================
+              services css start
+=========================================== */
+#services-part{
+  padding: 60px 0;
+  background: #ebf7eb;
+}
+
+#services-part .text{
+  margin: 30px 0;
+}
+
+#services-part .icon-box{
+  margin-bottom: 30px;
+}
+
+#services-part .icon{
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  background: #149ddd;
+  border-radius: 50%;
+  transition: 0.5s;
+  border: 1px solid #149ddd;
+}
+
+#services-part .icon i{
+  color: #fff;
+  font-size: 24px;
+}
+
+#services-part .icon-box:hover .icon{
+  background: #fff;
+}
+
+#services-part .icon-box:hover .icon i{
+  color: #149ddd;
+}
+
+#services-part h4{
+  margin-left: 80px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+#services-part h4 a{
+  color: #343a40;
+}
+
+#services-part .title a:hover{
+  color: #149ddd;
+}
+
+#services-part .description{
+  margin-left: 80px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+/* ========================================
+              services css end
+=========================================== */
+/* ========================================
+              facts css start
+=========================================== */
+#facts-part{
+  padding: 60px 0;
+  background: #dce9ff;
+}
+
+#facts-part .text{
+  margin: 25px 0;
+}
+
+#facts-part .count-box {
+  padding: 30px;
+  width: 100%;
+}
+
+#facts-part .count-box i {
+  display: block;
+  font-size: 44px;
+  color: #149ddd;
+  float: left;
+}
+
+#facts-part .count-box span {
+  font-size: 48px;
+  line-height: 40px;
+  display: block;
+  font-weight: 700;
+  color: #050d18;
+  margin-left: 60px;
+}
+
+#facts-part .count-box p {
+  padding: 15px 0 0 0;
+  margin: 0 0 0 60px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  color: #122f57;
+}
+
+#facts-part .count-box a {
+  font-weight: 600;
+  display: block;
+  margin-top: 20px;
+  color: #122f57;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  transition: ease-in-out 0.3s;
+}
+
+#facts-part .count-box a:hover {
+  color: #1f5297;
+}
+
+/* ========================================
+              facts css end
+=========================================== */
+/* ======================================
+          contact css start
+========================================= */
+#contact-part{
+  padding: 50px 0 15px 0;
+  background: #ebf7eb;
+}
+
+#contact-part .text{
+  margin: 25px 0;
+}
+
+#contact-part .info{
+  padding: 15px 30px;
+  background: #fff;
+  width: 100%;
+  -webkit-box-shadow: 0 10px 10px rgba(0,0,0,.5);
+  -moz-box-shadow: 0 10px 10px rgba(0,0,0,.5);
+  box-shadow: 0 10px 10px rgba(0,0,0,.5);
+}
+
+#contact-part .info i{
+  font-size: 20px;
+  color: #149ddd;
+  float: left;
+  width: 44px;
+  height: 44px;
+  background: #dff3fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  transition: .4s ease-in-out;
+}
+
+#contact-part .info h4{
+  padding: 0 0 0 60px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #050d18;
+}
+
+#contact-part .info p{
+  padding: 0 0 10px 60px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #173b6c;
+}
+
+#contact-part .info .map{
+  margin-top: 25px;
+}
+
+#contact-part .info .email:hover i, 
+#contact-part .info .address:hover i,
+ #contact-part .info .phone:hover i{
+  background: #149ddd;
+  color: #fff;
+}
+
+/* ======================================
+          contact css end
+========================================= */
+
+/* ====================================
+           resume css start
+======================================= */
+#resume-part .img img{
+  max-width: 100%;
+  height: 745px;
+  -webkit-box-shadow: 0 35px 20px #777;
+  -moz-box-shadow: 0 35px 20px #777;
+  box-shadow: 0 35px 20px #777;
+}
+
+/* ====================================
+           resume css end
+======================================= */
+
+/* ====================================
+          footer css start
+======================================= */
+#footer {
+  padding: 15px;
+  color: #f4f6fd;
+  font-size: 14px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 9999;
+  background: #040b14;
+}
+
+#footer .copyright {
+  text-align: center;
+}
+
+#footer .credits {
+  padding-top: 5px;
+  text-align: center;
+  font-size: 13px;
+  color: #eaebf0;
+}
+
+/* ====================================
+          footer css start
+======================================= */
